@@ -2,130 +2,160 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Premium Finance</title>
+<title>Premium Finance | SBI Style</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-  margin:0;
-  font-family:'Segoe UI',Arial;
-  background:#f2f5f9;
-  color:#222;
+  font-family:Segoe UI,Arial;
+  background:#f4f8fc;
+  color:#1f2937;
+}
+
+/* TOP BAR */
+.topbar{
+  position:sticky;
+  top:0;
+  background:#003b8e;
+  color:#fff;
+  padding:10px 15px;
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+  z-index:1000;
+}
+.topbar a{color:#fff;text-decoration:none;font-weight:600}
+
+/* NAV */
+nav{
+  background:#ffffff;
+  display:flex;
+  justify-content:space-around;
+  padding:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+nav a{
+  text-decoration:none;
+  color:#003b8e;
+  font-weight:700;
+  font-size:14px;
 }
 
 /* HEADER */
 header{
-  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  background:linear-gradient(135deg,#003b8e,#0059b3);
   color:#fff;
-  padding:65px 16px;
+  padding:70px 18px;
   text-align:center;
 }
-header h1{font-size:30px;margin-bottom:10px}
-header p{font-size:16px;opacity:0.9}
+header h1{font-size:34px}
+header p{margin-top:10px;opacity:.9}
 .btn{
   display:inline-block;
-  margin-top:22px;
-  padding:14px 30px;
-  background:#00c853;
+  margin-top:25px;
+  padding:14px 36px;
+  background:#00a859;
   color:#fff;
-  text-decoration:none;
   border-radius:40px;
-  font-weight:600;
+  text-decoration:none;
+  font-weight:700;
 }
 
 /* SECTION */
-section{
-  padding:40px 16px;
-}
-h2{
-  text-align:center;
-  color:#0b3c5d;
-  margin-bottom:25px;
-}
+section{padding:45px 18px}
+h2{text-align:center;color:#003b8e;margin-bottom:25px}
 
 /* CARDS */
 .cards{
   display:flex;
   flex-direction:column;
-  gap:20px;
+  gap:22px;
 }
 .card{
   background:#fff;
-  padding:24px;
-  border-radius:16px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  padding:26px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
   text-align:center;
 }
-.card h3{color:#0b3c5d}
+.card h3{color:#003b8e}
 
 /* EMI */
 .emi-box{
   background:#fff;
-  padding:25px;
-  border-radius:16px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  padding:26px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 .emi-box input{
   width:100%;
   padding:14px;
   margin:10px 0;
-  border-radius:10px;
+  border-radius:12px;
   border:1px solid #ccc;
 }
 .emi-result{
-  margin-top:15px;
-  font-size:18px;
+  margin:15px 0;
   font-weight:700;
-  color:#0b3c5d;
   text-align:center;
+  color:#003b8e;
 }
 
 /* FORM */
 form{
   background:#fff;
-  padding:25px;
-  border-radius:16px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  padding:26px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 form input,form select{
   width:100%;
   padding:14px;
   margin:10px 0;
-  border-radius:10px;
+  border-radius:12px;
   border:1px solid #ccc;
 }
 form button{
   width:100%;
-  padding:15px;
-  background:#0b3c5d;
+  padding:16px;
+  background:#003b8e;
   color:#fff;
   border:none;
-  border-radius:10px;
+  border-radius:12px;
   font-size:16px;
-  font-weight:600;
+  font-weight:700;
+}
+
+/* OWNER */
+.owner{
+  background:#fff;
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  line-height:1.8;
 }
 
 /* DISCLAIMER */
 .disclaimer{
   background:#fff;
-  padding:25px;
-  border-radius:16px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  padding:26px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
   font-size:14px;
-  line-height:1.7;
+  line-height:1.8;
 }
 
 /* FOOTER */
 footer{
-  background:#0f2027;
+  background:#003b8e;
   color:#fff;
   text-align:center;
   padding:16px;
   font-size:14px;
 }
 
-/* FLOATING BUTTONS */
+/* FLOAT BUTTONS */
 .whatsapp,.call{
   position:fixed;
   right:16px;
@@ -133,59 +163,73 @@ footer{
   border-radius:50px;
   color:#fff;
   text-decoration:none;
-  font-size:14px;
-  font-weight:600;
+  font-weight:700;
   z-index:999;
 }
 .whatsapp{bottom:20px;background:#25D366}
-.call{bottom:78px;background:#007bff}
+.call{bottom:78px;background:#2563eb}
 
 /* DESKTOP */
 @media(min-width:768px){
-  header h1{font-size:38px}
+  header h1{font-size:42px}
   .cards{flex-direction:row;justify-content:center}
-  section{max-width:1150px;margin:auto}
+  section{max-width:1200px;margin:auto}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Fast • Secure • Trusted Loans</h1>
-  <p>Personal Loan & Bank Style Loan (SBI Type)</p>
+<div class="topbar">
+  <div>Trusted SBI-Style Loan Assistance</div>
+  <div>
+    <a href="tel:9671331075">📞 9671331075</a> |
+    <a href="https://wa.me/919671331075" target="_blank">💬 WhatsApp</a>
+  </div>
+</div>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#emi">EMI</a>
+  <a href="#apply">Apply</a>
+  <a href="#owner">Owner</a>
+  <a href="#disclaimer">Disclaimer</a>
+</nav>
+
+<header id="home">
+  <h1>SBI Style Loan Services</h1>
+  <p>Personal Loan • Home • Business • Education</p>
   <a href="#apply" class="btn">Apply Now</a>
 </header>
 
 <section>
-  <h2>Our Loan Services</h2>
+  <h2>Loan Services</h2>
   <div class="cards">
     <div class="card">
       <h3>Personal Loan</h3>
-      <p>₹50,000 – ₹10,00,000</p>
-      <p>Quick Approval</p>
+      <p>Fast approval & minimum documents</p>
     </div>
     <div class="card">
       <h3>Bank Style Loan</h3>
-      <p>Home • Business • Education</p>
-      <p>Low Interest</p>
+      <p>Low interest & long tenure</p>
     </div>
   </div>
 </section>
 
-<section>
+<section id="emi">
   <h2>EMI Calculator</h2>
   <div class="emi-box">
-    <input type="number" id="p" placeholder="Loan Amount (₹)">
-    <input type="number" id="r" placeholder="Interest Rate (%)">
-    <input type="number" id="t" placeholder="Tenure (Months)">
+    <input id="p" type="number" placeholder="Loan Amount (₹)">
+    <input id="r" type="number" placeholder="Interest Rate (%)">
+    <input id="t" type="number" placeholder="Tenure (Months)">
     <div class="emi-result" id="emi">Monthly EMI: ₹0</div>
+    <canvas id="chart" height="200"></canvas>
   </div>
 </section>
 
 <section id="apply">
   <h2>Apply for Loan</h2>
-  <form onsubmit="sendWhatsApp();return false;">
+  <form onsubmit="sendWA();return false;">
     <input id="name" placeholder="Full Name" required>
     <input id="mobile" placeholder="Mobile Number" required>
     <select id="loan">
@@ -198,14 +242,23 @@ footer{
   </form>
 </section>
 
-<section>
+<section id="owner">
+  <h2>Owner Message</h2>
+  <div class="owner">
+    “Our mission is to provide transparent, RBI-guided loan assistance
+    with trust and honesty. We focus on customer satisfaction, fast support
+    and long-term relationships. Thank you for trusting us.”
+    <br><br>
+    <b>– Owner, Premium Finance</b>
+  </div>
+</section>
+
+<section id="disclaimer">
   <h2>RBI Disclaimer</h2>
   <div class="disclaimer">
-    This website is a financial service platform providing loan assistance.
-    We are not a bank or NBFC registered with RBI. Loan approval, interest rate,
-    and disbursement depend on partner banks/NBFCs as per RBI guidelines.
-    We do not charge any upfront fees. Users are advised to verify all details
-    before proceeding.
+    This website is a loan assistance platform and not a bank or RBI registered NBFC.
+    Loan approval, interest rate and disbursement depend on partner banks/NBFCs
+    as per RBI guidelines. No upfront fees are charged.
   </div>
 </section>
 
@@ -214,22 +267,41 @@ footer{
 </footer>
 
 <a class="whatsapp" href="https://wa.me/919671331075" target="_blank">💬 WhatsApp</a>
-<a class="call" href="tel:9671331075">📞 Call Now</a>
+<a class="call" href="tel:9671331075">📞 Call</a>
 
 <script>
-/* EMI */
-document.querySelectorAll("#p,#r,#t").forEach(i=>{
-  i.addEventListener("input",()=>{
-    let P=p.value,R=r.value/1200,T=t.value;
-    if(P&&R&&T){
-      let emi=(P*R*Math.pow(1+R,T))/(Math.pow(1+R,T)-1);
-      document.getElementById("emi").innerHTML="Monthly EMI: ₹"+emi.toFixed(0);
-    }
-  })
+/* EMI + CHART */
+const canvas=document.getElementById("chart");
+const ctx=canvas.getContext("2d");
+
+function drawChart(p,i){
+ ctx.clearRect(0,0,canvas.width,canvas.height);
+ let total=p+i;
+ let pw=(p/total)*canvas.width;
+ ctx.fillStyle="#003b8e";
+ ctx.fillRect(0,0,pw,40);
+ ctx.fillStyle="#00a859";
+ ctx.fillRect(pw,0,canvas.width-pw,40);
+ ctx.fillStyle="#000";
+ ctx.fillText("Principal",10,70);
+ ctx.fillText("Interest",pw+10,70);
+}
+
+["p","r","t"].forEach(id=>{
+ document.getElementById(id).addEventListener("input",()=>{
+  let P=p.value,R=r.value/1200,T=t.value;
+  if(P&&R&&T){
+   let emi=(P*R*Math.pow(1+R,T))/(Math.pow(1+R,T)-1);
+   let total=emi*T;
+   let interest=total-P;
+   document.getElementById("emi").innerHTML="Monthly EMI: ₹"+emi.toFixed(0);
+   drawChart(+P,interest);
+  }
+ });
 });
 
 /* WhatsApp */
-function sendWhatsApp(){
+function sendWA(){
  let msg=
  "New Loan Application%0A"+
  "Name: "+name.value+"%0A"+
@@ -243,3 +315,5 @@ function sendWhatsApp(){
 
 </body>
 </html>
+
+
